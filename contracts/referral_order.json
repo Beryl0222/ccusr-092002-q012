@@ -1,0 +1,14 @@
+{
+  "service": "referral-concierge",
+  "source_context": "http://health.people.com.cn/n1/2026/0918/c14739-40801392.html",
+  "sample": {
+    "referral_id": "FD-20260918-021",
+    "origin": "太姥山镇卫生院",
+    "reason": "胸闷待查",
+    "arrival_window": [
+      "2026-09-18T09:00:00+08:00",
+      "2026-09-18T10:00:00+08:00"
+    ],
+    "risk": "unknown"
+  }
+}
