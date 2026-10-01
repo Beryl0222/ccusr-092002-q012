@@ -5,7 +5,9 @@
   "type": "module",
   "description": "衔接基层转诊、院前评估、院内陪诊、危急升级和康复下转回访。",
   "scripts": {
-    "check": "node src/service.js --check",
-    "test": "node --test"
+    "check": "node src/service.js --check && node src/quality-server.js --check",
+    "start": "node src/service.js",
+    "start:quality": "node src/quality-server.js",
+    "test": "node --test test/contract.test.js test/quality/*.test.js"
   }
 }

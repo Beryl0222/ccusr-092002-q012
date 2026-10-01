@@ -1,0 +1,27 @@
+{
+  "service": "referral-quality",
+  "source_context": "http://health.people.com.cn/n1/2026/0918/c14739-40801392.html",
+  "description": "转诊质量改进服务接收的脱敏转诊旅程样例：仅含机构、风险层级与可追责的相对时序事件，不含任何直接个人标识。status=closed 的旅程方可纳入质控计算；open 为在诊只读接入。",
+  "sample": {
+    "referral_id": "FD-20260918-021",
+    "origin": "太姥山镇卫生院",
+    "reason": "胸闷待查",
+    "risk": "high",
+    "status": "closed",
+    "arrival_window": [
+      "2026-09-18T09:00:00+08:00",
+      "2026-09-18T10:00:00+08:00"
+    ],
+    "events": [
+      { "type": "order_created", "at": "2026-09-18T08:40:00+08:00" },
+      { "type": "materials_requested", "at": "2026-09-18T08:42:00+08:00", "actor": "转诊管家" },
+      { "type": "materials_complete", "at": "2026-09-18T09:05:00+08:00", "actor": "基层联络员" },
+      { "type": "first_contact", "at": "2026-09-18T08:55:00+08:00", "actor": "转诊管家" },
+      { "type": "arrival", "at": "2026-09-18T09:12:00+08:00" },
+      { "type": "handoff", "at": "2026-09-18T09:20:00+08:00", "actor": "急诊护士" },
+      { "type": "down_transfer", "at": "2026-09-22T10:00:00+08:00", "actor": "随访护士" },
+      { "type": "down_confirmed", "at": "2026-09-22T11:30:00+08:00", "actor": "基层联络员" },
+      { "type": "followup_complete", "at": "2026-09-25T15:00:00+08:00", "actor": "随访护士" }
+    ]
+  }
+}
