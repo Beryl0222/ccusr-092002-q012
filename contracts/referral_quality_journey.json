@@ -1,0 +1,41 @@
+{
+  "service": "referral-quality-improvement",
+  "source_context": "质控科只读接入，样例均为脱敏数据，不含真实个人资料",
+  "schema_note": "status=closed 的旅程才纳入月度指标；status=active 的在诊个案只读，系统不得变更其路线。时间均为 ISO8601 带时区。",
+  "samples": [
+    {
+      "referral_id": "FD-20260918-021",
+      "origin": "太姥山镇卫生院",
+      "risk": "high",
+      "status": "closed",
+      "created_at": "2026-09-18T08:05:00+08:00",
+      "arrival_window": ["2026-09-18T09:00:00+08:00", "2026-09-18T10:00:00+08:00"],
+      "documents": [
+        { "type": "转诊单", "uploaded_at": "2026-09-18T08:10:00+08:00" },
+        { "type": "检查资料", "uploaded_at": "2026-09-18T08:20:00+08:00" },
+        { "type": "用药记录", "uploaded_at": "2026-09-18T08:40:00+08:00" }
+      ],
+      "first_contact_at": "2026-09-18T08:12:00+08:00",
+      "arrived_at": "2026-09-18T09:25:00+08:00",
+      "handover_at": "2026-09-18T09:55:00+08:00",
+      "escalation": {
+        "requested_at": "2026-09-18T08:30:00+08:00",
+        "rerouted_at": "2026-09-18T08:50:00+08:00",
+        "channel": "胸痛中心绿色通道"
+      },
+      "downgrade_sent_at": "2026-09-25T10:00:00+08:00",
+      "downgrade_confirmed_at": "2026-09-26T15:00:00+08:00",
+      "closed_at": "2026-09-26T16:00:00+08:00",
+      "followup_completed_at": "2026-10-02T10:00:00+08:00"
+    },
+    {
+      "referral_id": "FD-20260918-022",
+      "origin": "店下镇卫生院",
+      "risk": "low",
+      "status": "active",
+      "created_at": "2026-09-18T13:00:00+08:00",
+      "arrival_window": ["2026-09-18T15:00:00+08:00", "2026-09-18T16:00:00+08:00"],
+      "documents": [{ "type": "转诊单", "uploaded_at": "2026-09-18T13:05:00+08:00" }]
+    }
+  ]
+}

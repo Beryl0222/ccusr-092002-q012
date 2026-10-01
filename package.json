@@ -6,6 +6,8 @@
   "description": "衔接基层转诊、院前评估、院内陪诊、危急升级和康复下转回访。",
   "scripts": {
     "check": "node src/service.js --check",
+    "check:quality": "node src/quality/service.js --check",
+    "start:quality": "node src/quality/service.js",
     "test": "node --test"
   }
 }
